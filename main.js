@@ -1,35 +1,8 @@
-console.log('テスト');
+const test_1 = 4;
+let test_2 = 3;
 
-const member = {
-  'name': '本田',
-  'height': 170,
-  'hobby': 'サッカー'
-};
+test_2 += 3;
 
-console.log(member.hobby);
+const test_3 = test_1 + test_2;
 
-const member_2 = {
-  '本田':{
-    'height':170,
-    'hobby':'サッカー'
-  },
-  '香川':{
-    'height':165,
-    'hobby':'サッカー'
-  }
-};
-
-console.log(member_2['香川']['height']);
-
-const member_3 = {
-  '1kumi':{
-    '本田':{
-      'height':170,
-      'hobby':'サッカー'
-    },
-    '香川':{}
-  },
-  '2kumi':{}
-};
-
-console.log(member_3);
+console.log(test_3);
