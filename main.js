@@ -1,32 +1,4 @@
-function test(){
-  console.log('テスト');
-}
+const test = 'テスト';
+const test_2 = 'です';
 
-test();
-
-const comment = 'コメント';
-
-function getComment(string){
-  console.log(string);
-}
-
-getComment(comment);
-
-function getNumberOfComment(){
-  return 5;
-}
-
-console.log(getNumberOfComment());
-
-const NumberOfComment = getNumberOfComment();
-
-console.log(NumberOfComment);
-
-function sumPrice(int1, int2){
-  let int3 = int1 + int2;
-  return int3;
-}
-
-const total = sumPrice(3,5);
-
-console.log(total);
+console.log(test.concat(test_2));
