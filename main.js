@@ -1,16 +1,11 @@
-const postalCode = '123-45007';
+const globalVariable = 'グローバル';
 
-const postal = {
+function checkScope(){
+  const localVariable = 'ローカル';
 
-  checkPostalCode(string){
-    const replaced = string.replace('-','');
-    const length = replaced.length;
+  console.log(localVariable);
+}
 
-    if(length === 7){
-      return true;
-    }
-    return false;
-  }
-};
+console.log(globalVariable);
 
-console.log(postal.checkPostalCode(postalCode));
+checkScope();
