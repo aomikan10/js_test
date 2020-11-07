@@ -1,7 +1,13 @@
-const test = {
-  test1:10,
-  test2:20,
-  test3:30
-};
+const postalCode = '123-45607';
 
-console.log(Object.values(test));
+function checkPostalCode(string){
+  const replaced = string.replace('-','');
+  const length = replaced.length;
+
+  if(length === 7){
+    return true;
+  }
+  return false;
+}
+
+console.log(checkPostalCode(postalCode));
