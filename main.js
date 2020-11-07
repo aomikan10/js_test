@@ -1,14 +1,17 @@
-const myMap = new Map();
+const scores = [10,20,30,40];
 
-myMap.set('id',3);
-myMap.set('name','本田');
+const newScores = scores.filter((value) => value >= 30);
 
-console.log(myMap);
+console.log(newScores);
 
-console.log(myMap.get('name'));
+const members = ['本田','香川','長友'];
 
-const valueList = myMap.values();
+const member = members.find((value) => value === '長友');
 
-for ( value of valueList){
-  console.log(value);
-}
+console.log(member);
+
+const userList = [10,20,30,40];
+
+const userIdList = userList.map((value) => {
+  return `user_${value}`;
+});
