@@ -1,40 +1,5 @@
 'use strict';
 
-// DOMContentLoaded
-// document.addEventListener('DOMContentLoaded',() => {
-//   setInterval(() => {
-//     let target = currentIndex + 1;
-//     if (target === images.length) {
-//       target = 0;
-//     }
-//     document.querySelectorAll('.carousel__thumbnails > li')[target].click();
-//     console.log(currentIndex);
-//   }, 2000);
-// });
-
-// window.onload = 関数
-// load
-window.addEventListener('load',() => {
-  //setInterval(() => {}, 1000 * 60 * 60 * 24 ); //1000=1秒 10秒 1分
-  setInterval(() => {
-   let target = currentIndex + 1;
-  //let target = Math.floor(Math.random() * images.length);
-    if (target === images.length) {
-      target = 0;
-    }
-    document.querySelectorAll('.carousel__thumbnails > li')[target].click();
-  }, 2000);
-});
-
-//即時関数 以前はvar 現在はlet const 
-(function immediate(){
-  console.log('即時関数です');
-})();
-
-// for(let i = 0 ; i < 10; i++){
-// console.log(Math.floor(Math.random() * 7));
-// }
-
 const images = [
   'images/image000.jpg',
   'images/image001.jpg',
@@ -48,12 +13,10 @@ const images = [
 let currentIndex = 0;
 
 const mainImage = document.getElementById('carousel__main');
-mainImage.src = images[currentIndex]; 
-//console.log(mainImage.src);
+mainImage.src = images[currentIndex];
+// console.log(mainImage.src);
 
-// forEach for of
 for( let [index, image] of images.entries()){
-  //console.log(index, image);
 
   const img = document.createElement('img');
   img.src = image;
@@ -69,8 +32,8 @@ for( let [index, image] of images.entries()){
 
     setTimeout(() => {
       mainImage.classList.remove('active');
-    }, 800); //ミリ秒 1000=1秒
-    
+    },800);
+
     const thumbnails = document.querySelectorAll('.carousel__thumbnails > li');
     thumbnails[currentIndex].classList.remove('current');
     currentIndex = index;
@@ -99,3 +62,4 @@ prev.addEventListener('click', () => {
   document.querySelectorAll('.carousel__thumbnails > li')[target].click();
 });
 
+  
