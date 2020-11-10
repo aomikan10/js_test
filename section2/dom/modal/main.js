@@ -18,3 +18,6 @@ close.addEventListener('click', () => {
 backGround.addEventListener('click', () => {
   close.click();
 })
+
+
+

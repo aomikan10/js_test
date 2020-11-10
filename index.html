@@ -3,6 +3,23 @@
   <meta charset="utf-8">
 </head>
 <body>
-  <script src="main.js"></script>
+<div id="test"></div>
+<button id="target" onclick="change_color()">押してね</button>
+<script>
+// function change_color(){
+//   const test = document.getElementById('test');
+//   test.textContent = 'テスト';
+//   test.classList.add('red');
+// }
+
+const target = document.getElementById('target');
+
+target.addEventListener('click', (e) => {
+  console.log(e);
+  const test = document.getElementById('test');
+  test.textContent = 'テスト';
+  test.classList.add('red');
+});
+</script>
 </body>
 </html>
